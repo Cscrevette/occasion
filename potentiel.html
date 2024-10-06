@@ -136,7 +136,8 @@
 
             const resultDiv = document.getElementById('result');
             if (potentiel) {
-                resultDiv.textContent = `Potentiel : ${potentiel.potentiel} €`;
+                // Arrondir à l'entier le plus proche
+                resultDiv.textContent = `Potentiel : ${Math.round(potentiel.potentiel)} €`;
             } else {
                 resultDiv.textContent = "Aucun résultat trouvé. Vérifiez vos informations.";
             }
