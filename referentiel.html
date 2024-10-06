@@ -1,26 +1,28 @@
 <html>
 <head>
-  <base href="https://cscrevette.github.io/occasion/WebOccasion.html">
+  <base href="referentiel.html">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aide à l'ouverture d'un magasin d'occasion</title>
+  <title>Référentiel - Magasin d'occasion</title>
   <style>
     body, html {
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
-      height: 100%;
       background-color: #f0f4f8;
     }
     .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
       display: flex;
-      flex-direction: column;
-      height: 100%;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
     header {
       background-color: #0064A3;
       color: white;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -40,117 +42,107 @@
     }
     h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 1.5em; /* Réduire la taille du texte pour les petits écrans */
     }
-    h3 {
-      margin: 0;
-      font-size: 1.5em;
-    }
-    .vignettes {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-grow: 1;
-      padding: 20px;
-      flex-wrap: wrap; /* Ajout pour permettre l'adaptation en une colonne */
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
     }
     .vignette {
       background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      width: 25%;
-      height: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px;
+      padding: 20px;
+      width: calc(50% - 40px);
+      min-height: 200px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      cursor: pointer;
+      text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin: 10px; /* Ajout pour espacer les vignettes */
+      cursor: pointer;
     }
     .vignette:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-    .icon {
-      font-size: 4em;
-      margin-bottom: 20px;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
     .vignette h2 {
-      text-align: center;
-      margin: 0;
-      padding: 0 10px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .vignette p {
+      color: #7f8c8d;
+      font-size: 0.9em;
+    }
+    .icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+      color: #3498db;
     }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-      h1 {
-        font-size: 2em; /* Réduire la taille du texte du titre */
-      }
-      h3 {
-        font-size: 1.2em; /* Réduire la taille du texte du sous-titre */
-      }
-      .vignettes {
-        flex-direction: column; /* Afficher les vignettes en colonne */
-        align-items: center;
-        padding: 10px; /* Réduire le padding sur les petits écrans */
-      }
       .vignette {
-        width: 100%; /* Faire en sorte que les vignettes prennent toute la largeur */
-        max-width: 400px; /* Ajouter une largeur maximale pour limiter l'étirement */
-        height: auto; /* Ajuster la hauteur automatiquement */
-        margin: 10px 0; /* Ajouter une marge verticale entre les vignettes */
+        width: calc(100% - 40px); /* Prend toute la largeur moins la marge */
       }
-      .icon {
-        font-size: 3em; /* Réduire la taille de l'icône */
-        margin-bottom: 15px;
+      .container {
+        padding: 10px; /* Réduire les marges intérieures */
+      }
+      header {
+        padding: 20px 0; /* Réduire le padding dans le header */
+      }
+      .back-button {
+        top: 10px; /* Ajuster la position du bouton retour */
+        left: 10px;
+        font-size: 1em; /* Réduire la taille du texte */
+      }
+      h1 {
+        font-size: 1.2em; /* Ajuster la taille de la police du titre */
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
+      <header>
       <img alt="" src="https://inovia.neocities.org/bandeau.jpg" class="header-image" width="1200" height="300">
+   <button class="back-button" onclick="location.href='https://cscrevette.github.io/occasion/WebOccasion.html';">Retour</button>
       <div class="header-content">
-        <h1>E.Leclerc Occasion</h1>
-        <h3>Déployer la seconde main sur son site</h3>
+        <h1>Référentiel</h1>
       </div>
     </header>
-    <div class="vignettes">
-      <div class="vignette" onclick="location.href='potentiel.html';">
-        <div class="icon">💡</div>
-        <h2>Potentiel</h2>
-      </div>
-      <div class="vignette" onclick="location.href='referentiel.html';">
-        <div class="icon">📚</div>
-        <h2>Référentiel</h2>
-      </div>
-      <div class="vignette" onclick="location.href='process.html';">
-        <div class="icon">🔄</div>
-        <h2>Process</h2>
-      </div>
+  <div class="container">
+    <div class="vignette" onclick="location.href='partis-pris.html';">
+      <div class="icon">&#128161;</div>
+      <h2>Les partis pris, les marqueurs</h2>
+      <p>Découvrez les éléments clés qui définissent notre approche</p>
+    </div>
+    
+    <div class="vignette" onclick="location.href='modules-implantation.html';">
+      <div class="icon">&#127981;</div>
+      <h2>Les modules et strates d'implantation</h2>
+      <p>Explorez notre stratégie d'aménagement et d'organisation</p>
+    </div>
+    
+    <div class="vignette" onclick="location.href='signaletique.html';">
+      <div class="icon">&#128681;</div>
+      <h2>La signalétique</h2>
+      <p>Notre système de communication visuelle en magasin</p>
+    </div>
+    
+    <div class="vignette" onclick="location.href='outils-achat.html';">
+      <div class="icon">&#128296;</div>
+      <h2>Les outils à l'achat</h2>
+      <p>Ressources et méthodes pour optimiser vos achats</p>
     </div>
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const vignettes = document.querySelectorAll('.vignette');
-      
-      vignettes.forEach((vignette, index) => {
-        vignette.style.opacity = '0';
-        vignette.style.transform = 'translateY(20px)';
-        vignette.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        
-        setTimeout(() => {
-          vignette.style.opacity = '1';
-          vignette.style.transform = 'translateY(0)';
-        }, 200 * index);
-      });
-    });
-  </script>
 </body>
 </html>
-
 
 
