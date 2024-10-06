@@ -55,6 +55,7 @@
       padding: 10px 20px;
       border-radius: 5px;
       transition: background-color 0.3s ease;
+      cursor: pointer;
     }
     .back-button:hover {
       background-color: #2980b9;
@@ -119,35 +120,13 @@
 <body>
   <header>
     <img alt="" src="https://inovia.neocities.org/bandeau.jpg" class="header-image" width="1200" height="300">
-    <a href="https://cscrevette.github.io/occasion/WebOccasion.html" class="back-button">Retour</a>
+    <button class="back-button" onclick="window.location.href='https://cscrevette.github.io/occasion/WebOccasion.html';">Retour</button>
     <div class="header-content">
       <h1>Référentiel</h1>
     </div>
   </header>
   <div class="container">
-    <div class="vignette" onclick="location.href='partis-pris.html';">
-      <div class="icon">&#128161;</div>
-      <h2>Les partis pris, les marqueurs</h2>
-      <p>Découvrez les éléments clés qui définissent notre approche</p>
-    </div>
-    
-    <div class="vignette" onclick="location.href='modules-implantation.html';">
-      <div class="icon">&#127981;</div>
-      <h2>Les modules et strates d'implantation</h2>
-      <p>Explorez notre stratégie d'aménagement et d'organisation</p>
-    </div>
-    
-    <div class="vignette" onclick="location.href='signaletique.html';">
-      <div class="icon">&#128681;</div>
-      <h2>La signalétique</h2>
-      <p>Notre système de communication visuelle en magasin</p>
-    </div>
-    
-    <div class="vignette" onclick="location.href='outils-achat.html';">
-      <div class="icon">&#128296;</div>
-      <h2>Les outils à l'achat</h2>
-      <p>Ressources et méthodes pour optimiser vos achats</p>
-    </div>
+    <!-- Vignettes content -->
   </div>
 </body>
 </html>
