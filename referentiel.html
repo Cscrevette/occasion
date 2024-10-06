@@ -1,7 +1,7 @@
 <html><head><base href="referentiel.html">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Référentiel - Aide à l'ouverture d'un magasin d'occasion</title>
+<title>Référentiel - Magasin d'occasion</title>
 <style>
   body, html {
     margin: 0;
@@ -13,162 +13,93 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   header {
     background-color: #2c3e50;
     color: white;
     text-align: center;
     padding: 20px 0;
-    margin-bottom: 30px;
+    width: 100%;
   }
   h1 {
     margin: 0;
-    font-size: 2.5em;
   }
   .back-button {
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #34495e;
     color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-size: 1.2em;
   }
-  .back-button:hover {
-    background-color: #2c3e50;
-  }
-  .content {
+  .vignette {
     background-color: white;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-    margin-top: 30px;
-  }
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  li {
-    margin-bottom: 15px;
-    padding-left: 25px;
-    position: relative;
-  }
-  li::before {
-    content: '•';
-    color: #3498db;
-    font-size: 1.5em;
-    position: absolute;
-    left: 0;
-    top: -5px;
-  }
-  .category {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    transition: color 0.3s ease;
   }
-  .category:hover {
+  .vignette:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  .vignette h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  .vignette p {
+    color: #7f8c8d;
+    font-size: 0.9em;
+  }
+  .icon {
+    font-size: 3em;
+    margin-bottom: 15px;
     color: #3498db;
-  }
-  .subcategory {
-    display: none;
-    margin-left: 20px;
-    margin-top: 10px;
   }
 </style>
 </head>
 <body>
   <header>
-    <button class="back-button" onclick="location.href='https://cscrevette.github.io/occasion/WebOccasion.html';">Retour</button>
-    <h1>Référentiel</h1>
+    <a href="index.html" class="back-button">&#8592; Retour</a>
+    <h1>Référentiel Magasin d'Occasion</h1>
   </header>
   
   <div class="container">
-    <div class="content">
-      <h2>Catégories de produits d'occasion</h2>
-      <ul>
-        <li>
-          <span class="category" onclick="toggleSubcategory('vetements')">Vêtements et accessoires</span>
-          <ul class="subcategory" id="vetements">
-            <li>Vêtements pour hommes</li>
-            <li>Vêtements pour femmes</li>
-            <li>Vêtements pour enfants</li>
-            <li>Chaussures</li>
-            <li>Sacs et accessoires</li>
-          </ul>
-        </li>
-        <li>
-          <span class="category" onclick="toggleSubcategory('electronique')">Électronique</span>
-          <ul class="subcategory" id="electronique">
-            <li>Smartphones et tablettes</li>
-            <li>Ordinateurs et laptops</li>
-            <li>Appareils photo et caméras</li>
-            <li>Consoles de jeux</li>
-            <li>Équipement audio</li>
-          </ul>
-        </li>
-        <li>
-          <span class="category" onclick="toggleSubcategory('meubles')">Meubles et décoration</span>
-          <ul class="subcategory" id="meubles">
-            <li>Meubles de salon</li>
-            <li>Meubles de chambre</li>
-            <li>Meubles de bureau</li>
-            <li>Décoration intérieure</li>
-            <li>Luminaires</li>
-          </ul>
-        </li>
-        <li>
-          <span class="category" onclick="toggleSubcategory('livres')">Livres et médias</span>
-          <ul class="subcategory" id="livres">
-            <li>Livres</li>
-            <li>DVD et Blu-ray</li>
-            <li>CD et vinyles</li>
-            <li>Jeux vidéo</li>
-          </ul>
-        </li>
-        <li>
-          <span class="category" onclick="toggleSubcategory('sport')">Équipement sportif</span>
-          <ul class="subcategory" id="sport">
-            <li>Vélos</li>
-            <li>Équipement de fitness</li>
-            <li>Matériel de camping</li>
-            <li>Équipement de ski et snowboard</li>
-          </ul>
-        </li>
-      </ul>
-      
-      <h2>Normes et réglementations</h2>
-      <ul>
-        <li>Réglementation sur la vente de produits d'occasion</li>
-        <li>Normes de sécurité pour les produits électroniques</li>
-        <li>Règles d'hygiène pour les vêtements et textiles</li>
-        <li>Législation sur la garantie des produits d'occasion</li>
-      </ul>
-      
-      <h2>Méthodes d'évaluation et de tarification</h2>
-      <ul>
-        <li>Évaluation de l'état des produits</li>
-        <li>Recherche des prix du marché</li>
-        <li>Calcul de la marge bénéficiaire</li>
-        <li>Stratégies de prix dynamiques</li>
-      </ul>
+    <div class="vignette" onclick="location.href='partis-pris.html';">
+      <div class="icon">&#128161;</div>
+      <h2>Les partis pris, les marqueurs</h2>
+      <p>Découvrez les éléments clés qui définissent notre approche</p>
+    </div>
+    
+    <div class="vignette" onclick="location.href='modules-implantation.html';">
+      <div class="icon">&#127981;</div>
+      <h2>Les modules et strates d'implantation</h2>
+      <p>Explorez notre stratégie d'aménagement et d'organisation</p>
+    </div>
+    
+    <div class="vignette" onclick="location.href='signaletique.html';">
+      <div class="icon">&#128681;</div>
+      <h2>La signalétique</h2>
+      <p>Notre système de communication visuelle en magasin</p>
+    </div>
+    
+    <div class="vignette" onclick="location.href='outils-achat.html';">
+      <div class="icon">&#128296;</div>
+      <h2>Les outils à l'achat</h2>
+      <p>Ressources et méthodes pour optimiser vos achats</p>
     </div>
   </div>
 
-  <script>
-    function toggleSubcategory(id) {
-      const subcategory = document.getElementById(id);
-      if (subcategory.style.display === 'none' || subcategory.style.display === '') {
-        subcategory.style.display = 'block';
-      } else {
-        subcategory.style.display = 'none';
-      }
-    }
-  </script>
 </body></html>
