@@ -1,74 +1,99 @@
-<html><head><base href="referentiel.html">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Référentiel - Magasin d'occasion</title>
-<style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
-  }
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  header {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    width: 100%;
-  }
-  h1 {
-    margin: 0;
-  }
-  .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-  .vignette {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 20px;
-    padding: 20px;
-    width: calc(50% - 40px);
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  .vignette:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  }
-  .vignette h2 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  .vignette p {
-    color: #7f8c8d;
-    font-size: 0.9em;
-  }
-  .icon {
-    font-size: 3em;
-    margin-bottom: 15px;
-    color: #3498db;
-  }
-</style>
+<html>
+<head>
+  <base href="referentiel.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Référentiel - Magasin d'occasion</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f4f8;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+      position: relative;
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.5em; /* Réduire la taille du texte pour les petits écrans */
+    }
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+    .vignette {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px;
+      padding: 20px;
+      width: calc(50% - 40px);
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .vignette:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .vignette h2 {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+    .vignette p {
+      color: #7f8c8d;
+      font-size: 0.9em;
+    }
+    .icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+      color: #3498db;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .vignette {
+        width: calc(100% - 40px); /* Prend toute la largeur moins la marge */
+      }
+      .container {
+        padding: 10px; /* Réduire les marges intérieures */
+      }
+      header {
+        padding: 10px 0; /* Réduire le padding dans le header */
+      }
+      .back-button {
+        top: 10px; /* Ajuster la position du bouton retour */
+        left: 10px;
+        font-size: 1em; /* Réduire la taille du texte */
+      }
+      h1 {
+        font-size: 1.2em; /* Ajuster la taille de la police du titre */
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -102,4 +127,5 @@
     </div>
   </div>
 
-</body></html>
+</body>
+</html>
