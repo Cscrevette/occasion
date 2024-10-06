@@ -1,28 +1,26 @@
 <html>
 <head>
-  <base href="referentiel.html">
+  <base href="https://cscrevette.github.io/occasion/WebOccasion.html">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Référentiel - Magasin d'occasion</title>
+  <title>Aide à l'ouverture d'un magasin d'occasion</title>
   <style>
     body, html {
       margin: 0;
       padding: 0;
       font-family: 'Arial', sans-serif;
+      height: 100%;
       background-color: #f0f4f8;
     }
     .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+      flex-direction: column;
+      height: 100%;
     }
     header {
       background-color: #0064A3;
       color: white;
-      padding: 30px;
+      padding: 20px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -42,93 +40,117 @@
     }
     h1 {
       margin: 0;
+      font-size: 2.5em;
+    }
+    h3 {
+      margin: 0;
       font-size: 1.5em;
     }
-    .back-button {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      color: white;
-      text-decoration: none;
-      font-size: 1.2em;
-      background-color: #3498db;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-    .back-button:hover {
-      background-color: #2980b9;
+    .vignettes {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-grow: 1;
+      padding: 20px;
+      flex-wrap: wrap; /* Ajout pour permettre l'adaptation en une colonne */
     }
     .vignette {
       background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin: 20px;
-      padding: 20px;
-      width: calc(50% - 40px);
-      min-height: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 25%;
+      height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 10px; /* Ajout pour espacer les vignettes */
     }
     .vignette:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    }
-    .vignette h2 {
-      color: #2c3e50;
-      margin-bottom: 10px;
-    }
-    .vignette p {
-      color: #7f8c8d;
-      font-size: 0.9em;
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
     .icon {
-      font-size: 3em;
-      margin-bottom: 15px;
-      color: #3498db;
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+    .vignette h2 {
+      text-align: center;
+      margin: 0;
+      padding: 0 10px;
     }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-      .vignette {
-        width: calc(100% - 40px);
-      }
-      .container {
-        padding: 10px;
-      }
-      header {
-        padding: 10px 0;
-      }
-      .back-button {
-        top: 10px;
-        left: 10px;
-        font-size: 1em;
-        padding: 8px 15px;
-      }
       h1 {
-        font-size: 1.2em;
+        font-size: 2em; /* Réduire la taille du texte du titre */
+      }
+      h3 {
+        font-size: 1.2em; /* Réduire la taille du texte du sous-titre */
+      }
+      .vignettes {
+        flex-direction: column; /* Afficher les vignettes en colonne */
+        align-items: center;
+        padding: 10px; /* Réduire le padding sur les petits écrans */
+      }
+      .vignette {
+        width: 100%; /* Faire en sorte que les vignettes prennent toute la largeur */
+        max-width: 400px; /* Ajouter une largeur maximale pour limiter l'étirement */
+        height: auto; /* Ajuster la hauteur automatiquement */
+        margin: 10px 0; /* Ajouter une marge verticale entre les vignettes */
+      }
+      .icon {
+        font-size: 3em; /* Réduire la taille de l'icône */
+        margin-bottom: 15px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img alt="" src="https://inovia.neocities.org/bandeau.jpg" class="header-image" width="1200" height="300">
-    <button class="back-button" onclick="window.location.href='https://cscrevette.github.io/occasion/WebOccasion.html';">Retour</button>
-    <div class="header-content">
-      <h1>Référentiel</h1>
-    </div>
-  </header>
   <div class="container">
-    <!-- Vignettes content -->
+    <header>
+      <img alt="" src="https://inovia.neocities.org/bandeau.jpg" class="header-image" width="1200" height="300">
+      <div class="header-content">
+        <h1>E.Leclerc Occasion</h1>
+        <h3>Déployer la seconde main sur son site</h3>
+      </div>
+    </header>
+    <div class="vignettes">
+      <div class="vignette" onclick="location.href='potentiel.html';">
+        <div class="icon">💡</div>
+        <h2>Potentiel</h2>
+      </div>
+      <div class="vignette" onclick="location.href='referentiel.html';">
+        <div class="icon">📚</div>
+        <h2>Référentiel</h2>
+      </div>
+      <div class="vignette" onclick="location.href='process.html';">
+        <div class="icon">🔄</div>
+        <h2>Process</h2>
+      </div>
+    </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const vignettes = document.querySelectorAll('.vignette');
+      
+      vignettes.forEach((vignette, index) => {
+        vignette.style.opacity = '0';
+        vignette.style.transform = 'translateY(20px)';
+        vignette.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        
+        setTimeout(() => {
+          vignette.style.opacity = '1';
+          vignette.style.transform = 'translateY(0)';
+        }, 200 * index);
+      });
+    });
+  </script>
 </body>
 </html>
+
 
 
