@@ -136,8 +136,8 @@
 
             const resultDiv = document.getElementById('result');
             if (potentiel) {
-                // Arrondir à l'entier le plus proche
-                resultDiv.textContent = `Potentiel : ${Math.round(potentiel.potentiel)} €`;
+                // Arrondir à l'entier le plus proche et ajouter le séparateur de milliers
+                resultDiv.textContent = `Potentiel : ${Math.round(potentiel.potentiel).toLocaleString('fr-FR')} €`;
             } else {
                 resultDiv.textContent = "Aucun résultat trouvé. Vérifiez vos informations.";
             }
