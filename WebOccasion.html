@@ -10,7 +10,7 @@
       padding: 0;
       font-family: 'Arial', sans-serif;
       height: 100%;
-      background-color: #f0f4f8;
+      background: linear-gradient(135deg, #e0f7fa, #f0f4f8);
     }
     .container {
       display: flex;
@@ -41,10 +41,13 @@
     h1 {
       margin: 0;
       font-size: 2.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
     h3 {
       margin: 0;
       font-size: 1.5em;
+      font-weight: 300;
     }
     .vignettes {
       display: flex;
@@ -52,12 +55,12 @@
       align-items: center;
       flex-grow: 1;
       padding: 20px;
-      flex-wrap: wrap; /* Ajout pour permettre l'adaptation en une colonne */
+      flex-wrap: wrap;
     }
     .vignette {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(145deg, #ffffff, #e0f7fa);
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
       width: 25%;
       height: 300px;
       display: flex;
@@ -66,11 +69,11 @@
       align-items: center;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin: 10px; /* Ajout pour espacer les vignettes */
+      margin: 10px;
     }
     .vignette:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
     .icon {
       font-size: 4em;
@@ -80,29 +83,30 @@
       text-align: center;
       margin: 0;
       padding: 0 10px;
+      font-weight: bold;
     }
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
       h1 {
-        font-size: 2em; /* Réduire la taille du texte du titre */
+        font-size: 2em;
       }
       h3 {
-        font-size: 1.2em; /* Réduire la taille du texte du sous-titre */
+        font-size: 1.2em;
       }
       .vignettes {
-        flex-direction: column; /* Afficher les vignettes en colonne */
+        flex-direction: column;
         align-items: center;
-        padding: 10px; /* Réduire le padding sur les petits écrans */
+        padding: 10px;
       }
       .vignette {
-        width: 100%; /* Faire en sorte que les vignettes prennent toute la largeur */
-        max-width: 400px; /* Ajouter une largeur maximale pour limiter l'étirement */
-        height: auto; /* Ajuster la hauteur automatiquement */
-        margin: 10px 0; /* Ajouter une marge verticale entre les vignettes */
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 10px 0;
       }
       .icon {
-        font-size: 3em; /* Réduire la taille de l'icône */
+        font-size: 3em;
         margin-bottom: 15px;
       }
     }
